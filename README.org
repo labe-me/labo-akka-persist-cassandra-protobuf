@@ -1,0 +1,17 @@
+#+TITLE: Akka cassandra persistence playground
+* Notes
+Docker and docker-compose are used to manage the playground.
+
+Start cassandra cluster (one seed and a node) in a terminal:
+
+#+BEGIN_SRC bash
+docker-compose up -d
+#+END_SRC
+
+Start sbt console in another:
+
+#+BEGIN_SRC bash
+docker-compose run --rm sbt sbt
+#+END_SRC
+
+See src/main/scala/service.scala and start sbt's run task in sbt's console.

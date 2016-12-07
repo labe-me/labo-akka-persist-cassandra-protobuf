@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <appender name="OUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="akka" level="INHERITED">
+    <appender-ref ref="OUT"/>
+  </logger>
+
+  <!-- <logger name="akka.cluster.ddata.Replicator" level="INFO" /> -->
+  <!-- <logger name="akka.cluster.ClusterHeartbeatSender" level="INFO"/> -->
+
+  <logger name="me.labe.labo.EntityActor" level="DEBUG" />
+
+  <root level="INFO">
+    <appender-ref ref="OUT"/>
+  </root>
+
+</configuration>
