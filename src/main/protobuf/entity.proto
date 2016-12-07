@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+// required for extends options (see below)
 import "scalapb/scalapb.proto";
 
 package me.labe.labo;
@@ -10,7 +11,7 @@ message Entity {
 
 };
 
-// NOTE: I tried to put these messages inside the Entity message (for namespacing but ti looks like the parseFrom method is not available)
+// NOTE: I tried to put these messages inside the Entity message (for namespacing but it looks like the parseFrom method is not available)
 
 message Incremented {
   option (scalapb.message).extends = "me.labe.labo.EntityEvent";

@@ -27,8 +27,7 @@ object Service extends App {
   println("Press enter to end")
   scala.io.StdIn.readLine()
 
-  system.shutdown()
-  system.awaitTermination()
+  system.terminate()
 
 }
 
